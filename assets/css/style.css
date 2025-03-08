@@ -58,7 +58,7 @@ body {
 :root { 
     --e-global-color-primary: #141430;
     --e-global-color-secondary: #0f0200;
-    --e-global-color-accent: #f94a24;
+    --e-global-color-accent: #f7cd5a;
     --e-global-color-text: #4c4c4c;
 	--e-global-color-white: #ffffff;
     --e-global-color-black: #000000;
@@ -76,40 +76,48 @@ body {
 h1{
     font-size: 72px;
     line-height: 84px;
-    font-weight: 700;
-    font-family: "Playfair Display", serif;
+    font-family: "Major Mono Display", monospace;
+  font-weight: 600;
+  font-style: normal;
 }
 h2{
     font-size: 46px;
     line-height: 60px;
-    font-weight: 700;
     color: var(--e-global-color-secondary);
-    font-family: "Playfair Display", serif;
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
 }
 h3{
     font-size: 26px;
     line-height: 30px;
-    font-weight: 700;
-    font-family: "Playfair Display", serif;
+    font-family: "Onest", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 h4{
     font-size: 22px;
     line-height: 26px;
-    font-weight: 700;
-    font-family: "Playfair Display", serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 h5{
     font-size: 20px;
     line-height: 26px;
-    font-weight: 700;
-    font-family: "Playfair Display", serif;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:300;
+  font-style: normal;
 }
 h6{
     font-size: 16px;
     line-height: 24px;
-    font-weight: 500;
-    text-transform: capitalize;
-    color: var(--e-global-color-accent);
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #e7ab03;
 }
 p{
     font-size: 20px;
@@ -135,7 +143,7 @@ p{
     font-weight: 400;
     color: var(--e-global-color-text);
 }
-.all_button{
+.black_button{
     font-size: 14px;
     line-height: 14px;
     font-weight: 700;
@@ -148,6 +156,29 @@ p{
     background: var(--e-global-color-accent);
     transition: all 0.3s ease-in-out;
 }
+.black_button:hover{
+    color: var(--e-global-color-white);
+    background: var(--e-global-color-secondary);
+}
+.black_button i {
+    font-size: 12px;
+    margin-left: 14px;
+    transition: all 0.3s ease-in-out;
+    color: var(--e-global-color-white);
+}
+.all_button{
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 30px;
+    position: relative;
+    display: inline-block;
+    color: var(--e-global-color-black);
+    background: var(--e-global-color-accent);
+    transition: all 0.3s ease-in-out;
+}
 .all_button:hover{
     color: var(--e-global-color-white);
     background: var(--e-global-color-secondary);
@@ -156,7 +187,7 @@ p{
     font-size: 12px;
     margin-left: 14px;
     transition: all 0.3s ease-in-out;
-    color: var(--e-global-color-white);
+    color: var(--e-global-color-black);
 }
 html{
     scroll-behavior: smooth;
@@ -580,7 +611,8 @@ html{
 
 .project-con{
     padding: 155px 0 158px;
-    background-color: var(--e-global-color-very-dark-mostly-white-orange);
+    background-color: black;
+    background-image:url(../images2/project_bg.png);
 }
 .project-con .project-leftimage{
     position: absolute;
@@ -602,6 +634,10 @@ html{
 }
 .project-con .project_content h2{
     margin-bottom: 68px;
+    color: #ffffff;
+}
+.project .project-box .lower_content h3{
+    color:#ffffff;
 }
 .project-con .project_wrapper1 .project-box{
     margin-bottom: 120px;
@@ -2125,7 +2161,7 @@ html{
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-    background-image: url(../images/banner2-rightbackground.jpg);
+    background-image: url(../images2/banner3.png);
 }
 .luxurious_banner_outer .header {
     border-bottom: none;
