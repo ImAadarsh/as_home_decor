@@ -3637,10 +3637,14 @@ html{
     margin-bottom: 30px;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
 .service-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
@@ -3679,28 +3683,6 @@ html{
     font-size: 18px;
 }
 
-.service-section .learn_more {
-    color: var(--e-global-color-secondary);
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.service-section .learn_more i {
-    margin-left: 10px;
-    transition: all 0.3s ease;
-}
-
-.service-section .learn_more:hover {
-    color: var(--e-global-color-accent);
-}
-
-.service-section .learn_more:hover i {
-    transform: translateX(5px);
-}
-
 @media (max-width: 991px) {
     .service-section {
         text-align: center;
@@ -3712,6 +3694,20 @@ html{
     
     .service-content .list li {
         justify-content: center;
+    }
+    
+    .service-image {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .service-image {
+        margin-bottom: 15px;
+    }
+    
+    .service-content h4 {
+        font-size: 20px;
     }
 }
 
