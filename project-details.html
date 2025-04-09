@@ -35,6 +35,14 @@
     <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/aos.css" rel="stylesheet">
     <link href="assets/css/magnific-popup.css" rel="stylesheet" type="text/css">
+    <style>
+        .project-details-section {
+            display: none; /* Hide all project sections by default */
+        }
+        .project-details-section.active {
+            display: block; /* Show only active project section */
+        }
+    </style>
 </head>
 <body>
 <!-- Back to top button -->
@@ -84,11 +92,13 @@
             <div class="row">
                 <div class="col-12">
                     <div class="sub_banner_content text-center" data-aos="fade-up">
-                        <h1 class="text-white">Project Details</h1>
+                        <h1 class="text-white" id="projectTitle">Project Details</h1>
                         <div class="box">
-                            <a href="project-details.html" class="text-decoration-none">
-                                <span class="mb-0">Explore our stunning collection of project images showcasing our design expertise</span>
+                            <a href="project.html" class="text-decoration-none">
+                                <span class="mb-0">Projects</span>
                             </a>
+                            <span class="mb-0 slash">/</span>
+                            <span class="mb-0 box_span" id="projectName">Project Details</span>
                         </div>
                     </div>
                 </div>
@@ -98,7 +108,7 @@
 </div>
 
 <!-- Project Mr. Abhishek Bansal Details Section -->
-<section class="project-details-section py-5">
+<section class="project-details-section py-5" id="abhishek-section">
     <div class="container">
         <div class="project-grid">
             <!-- Large Image Group -->
@@ -164,7 +174,7 @@
     </div>
 </section>
 <!-- Project Gym Step to Fitness Details Section -->
-<section class="project-details-section py-5">
+<section class="project-details-section py-5" id="gym-section">
     <div class="container">
         <div class="project-grid">
             <!-- Large Image Group -->
@@ -230,7 +240,7 @@
     </div>
 </section>
 <!-- Project Cube Modern House Details Section -->
-<section class="project-details-section py-5">
+<section class="project-details-section py-5" id="cube-section">
     <div class="container">
         <div class="project-grid">
             <!-- Large Image Group -->
@@ -611,5 +621,58 @@
 <script src="assets/js/animation.js"></script>
 <script src="assets/js/back-to-top-button.js"></script>
 <script src="assets/js/preloader.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get project parameter from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const project = urlParams.get('project');
+    
+    // Define project details
+    const projects = {
+        'abhishek': {
+            title: 'Mr. Abhishek Bansal - Interior Luxury Living',
+            section: 'abhishek-section'
+        },
+        'gym': {
+            title: 'Gym Step to Fitness - Commercial Project',
+            section: 'gym-section'
+        },
+        'cube': {
+            title: 'Cube Modern House - Architecture',
+            section: 'cube-section'
+        }
+    };
+
+    if (project && projects[project]) {
+        // Update page title and breadcrumb
+        document.title = projects[project].title + ' | AS Home Decor';
+        document.getElementById('projectTitle').textContent = projects[project].title;
+        document.getElementById('projectName').textContent = projects[project].title;
+
+        // Show only the selected project section
+        document.querySelectorAll('.project-details-section').forEach(section => {
+            section.classList.remove('active');
+            if (section.id === projects[project].section) {
+                section.classList.add('active');
+            }
+        });
+    } else {
+        // If no valid project specified, redirect to projects page
+        window.location.href = 'project.html';
+    }
+
+    // Initialize Magnific Popup for image gallery
+    $('.image-popup').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        },
+        zoom: {
+            enabled: true,
+            duration: 300
+        }
+    });
+});
+</script>
 </body>
 </html>
