@@ -104,7 +104,7 @@
             <div class="col-lg-5 col-md-4 col-sm-12 col-12">
                 <div class="about_wrapper position-relative" data-aos="zoom-in">
                     <figure class="about-image mb-0">
-                        <img src="./assets/images/aboutpage-image.jpg" alt="image" class="img-fluid">
+                        <img src="./assets/images2/project_images/profile.png" alt="image" class="img-fluid">
                     </figure>
                 </div>
             </div>
@@ -216,32 +216,104 @@
         </div>
     </div>
 </section>
-<!--Our Journey -
-<section class="journey-con">
+<!-- Add Magnific Popup JS -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.image-popup').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            closeBtnInside: false,
+            fixedContentPos: true,
+            mainClass: 'mfp-zoom-in',
+            image: {
+                verticalFit: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300
+            }
+        });
+    });
+</script>
+
+<!-- Founder Profile -->
+<section class="founder-con position-relative">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-md-12 col-sm-12 col-12">
-                <div class="journey_wrapper position-relative" data-aos="zoom-in">
-                    <figure class="image journey-image1 mb-0">
-                        <img src="./assets/images/vision-image1.jpg" alt="image" class="img-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="founder_wrapper position-relative" data-aos="zoom-in">
+                    <figure class="founder-image mb-0">
+                        <img src="./assets/images2/project_images/profile.png" alt="Founder - Aman Ahmad Saifi" class="img-fluid">
                     </figure>
-                    <figure class="image journey-image2 mb-0">
-                        <img src="./assets/images/vision-image2.jpg" alt="image" class="img-fluid">
-                    </figure>
+                    <div class="founder-overlay">
+                        <div class="overlay-content">
+                            <h4>Aman Ahmad Saifi</h4>
+                            <p class="mb-0">Founder & Creative Director</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/a-s-home-decor-a73abb233/" class="text-decoration-none" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/ashomedecor1" class="text-decoration-none" aria-label="Instagram Profile"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-7 col-md-12 col-sm-12 col-12 text-md-right">
-                <div class="journey_content" data-aos="fade-up">
-                    <h6>Our Journey</h6>
-                    <h2>From Vision to Reality One Space at a Time</h2>
-                    <p class="text text-size-16">Starting with small yet ambitious projects, we embraced challenges that refined our expertise. From residential makeovers to commercial transformations, every project strengthened our reputation for innovation, detail, and quality.</p>
-                    <a href="./service.html" class="text-decoration-none black_button">Read More<i class="fa-solid fa-arrow-right"></i></a>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="founder_content" data-aos="fade-up">
+                    <h6 class="text-uppercase">Meet Our Founder</h6>
+                    <h2 class="global-color-accen">The Visionary Behind A.S Home Decor</h2>
+                    <div class="founder-description">
+                        <p class="text text-size-16">With over 15 years of experience in interior design and architecture, Aman Ahmad Saifi has established himself as a leading figure in the industry. His passion for creating beautiful, functional spaces is matched only by his commitment to excellence and client satisfaction.</p>
+                        <p class="text text-size-16">Aman's journey began with a simple belief: that every space has the potential to tell a unique story. This philosophy drives our company's approach to every project, ensuring that each design reflects the personality and needs of our clients while maintaining the highest standards of quality and innovation.</p>
+                    </div>
+                </div>          
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">     
+                <div class="founder-achievements-wrapper">
+                    <div class="row g-4">
+                        <div class="col-md-3 col-sm-6 col-12">
+                            <div class="achievement-box">
+                                <i class="fa-solid fa-award"></i>
+                                <div class="achievement-content">
+                                    <h5>15+ Years</h5>
+                                    <p class="mb-0">Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-12">
+                            <div class="achievement-box">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                <div class="achievement-content">
+                                    <h5>500+</h5>
+                                    <p class="mb-0">Projects</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-12">
+                            <div class="achievement-box">
+                                <i class="fa-solid fa-handshake"></i>
+                                <div class="achievement-content">
+                                    <h5>100%</h5>
+                                    <p class="mb-0">Satisfaction</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-12">
+                            <div class="achievement-box">
+                                <i class="fa-solid fa-trophy"></i>
+                                <div class="achievement-content">
+                                    <h5>50+</h5>
+                                    <p class="mb-0">Awards</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-Testimonial -->
+<!-- Testimonial -->
 <section class="projecttestimonial-con position-relative">
     <figure class="image testimonial-leftimage mb-0">
         <img src="./assets/images/project-leftimage.png" alt="image" class="img-fluid">
@@ -432,7 +504,7 @@ Testimonial -->
         <div class="row">
             <div class="col-12">
                 <div class="faq_content text-center" data-aos="fade-up">
-                    <h6>Faq’s</h6>
+                    <h6>Faq's</h6>
                     <h2>Frequently Asked Questions</h2>
                 </div>
             </div>
@@ -493,7 +565,7 @@ Testimonial -->
                                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faq_accordion1">
                                     <div class="card-body">
                                         <p class="text-size-16 text-left mb-0">Our core values—creativity, quality, collaboration, and integrity—drive us to deliver exceptional 
-                                            designs that reflect our clients’ unique visions.
+                                            designs that reflect our clients' unique visions.
                                         </p>
                                     </div>
                                 </div>
@@ -515,13 +587,13 @@ Testimonial -->
                         <a href="./index.html" class="footer-logo">
                             <figure class="mb-0"><img src="assets/images2/logo.png" style="height: 90px; width: 250px;" alt="image"></figure>
                         </a>
-                        <p class="text-size-14">A.S Home Decor is a leading interior design and architectural firm dedicated to creating bespoke spaces that blend creativity, 
+                        <p class="text-size-14">AS Home Decor is a leading interior design and architectural firm dedicated to creating bespoke spaces that blend creativity, 
                             functionality, and personalized aesthetics.
                         </p>
                         <ul class="list-unstyled mb-0 social-icons">
                             <li><a href="https://www.facebook.com/ashomedecor0" class="text-decoration-none"><i class="fa-brands fa-facebook-f social-networks"></i></a></li>
                             <li><a href="https://www.instagram.com/ashomedecor1?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==/" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a></li>
-
+                            <li><a href="https://www.linkedin.com/in/a-s-home-decor-a73abb233/" class="text-decoration-none"><i class="fa-brands fa-linkedin social-networks"></i></a></li>
                         </ul>
                     </div>
                 </div>
